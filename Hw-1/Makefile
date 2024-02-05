@@ -10,7 +10,7 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = asciiart.out
+PROGRAM = hangman.out
 
 # list all .cpp files separated by space
 CPPFILES = main.cpp

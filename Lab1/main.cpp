@@ -21,31 +21,31 @@ using namespace std; //resolve cout, cin, and endl names
 int main()
 {
     //FIXME3: declare a variable to store name
-    int name;
-
+    
+    string name;
     //FIXME4: prompt user  enter their name and store the value in variable
     cout << "Please enter your Name" << endl;
-    cin >> name >> endl; 
+    getline ( cin, name);
     //FIXME5: greet the name using the variable as the following output
     //must output: Nice meeting you, <name>!
     cout << "Nice to meet you " << name << endl;
     cout << "Hope you like my Tom & Jerry ASCII art...\n\n";
 
-    string line1 = "     |\_/|  *****************************   (\_/)";
+    string line1 = "   |\\/_/|     *****************************    (\\/_/)\n";
     cout << line1;
 
     //FIXME6: use variable to print the second line line of the graphic
-    string line2 = "  /  @  @ \     *    ASCII Lab  *  	  (='.'=)";
+    string line2 = "  /  @  @\\    *        ASCII Lab          *    (='.'=)\n";
     cout << line2;
     
     //FIXME7: print the third line of the graphics
-    string line3 =  "( >   0  <   )     *   By: <Tristan Mandery>  * 	( " )_( " ) "; 
+    string line3 =  "( >   0  <  ) *   By: <Tristan Mandery>   *   ( \" )( \" )\n "; 
     cout << line3;
     //FIXME8: use variable to print the fourth line
-    string line4 = "  >>x<<        	*                     CSCI 111              *  ";
+    string line4 = "  >>x<<      *          CSCI 111         * \n ";
     cout << line4; 
     //FIXME9: use variable to print the fifth line
-    string line5= " /   O  \       	*****************************  "; 
+    string line5= " /   O  \\/   ***************************** \n "; 
     cout << line5;
       
 
