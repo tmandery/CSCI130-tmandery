@@ -11,10 +11,10 @@ int main()
 {
   
     string somePhrase;
-    
     somePhrase = "This is a \"phrase\" \athat im typing.";
-
     cout << somePhrase << endl; 
+
+    
 
 
 
