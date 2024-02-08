@@ -11,8 +11,13 @@ using namespace std;
 int main()
 {
     string name;
-    cout << " What is your name? " << endl;
-    
+    cout << " Hey there please enter your name " << endl;
+    getline(cin,name); 
+    cout << " Hey,"<< name << endl;
+    cout << "The hangman game is under construction, maybe youll get to play it in a few weeks…\n";
+    cout << "This is what various stages of the hangman game will look like…\n";
+
+ 
 
 
     string label; 
