@@ -39,3 +39,15 @@ this is not a new line....
 | Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
 | Self Grade | 100/100 |
 | Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
+
+
+Lab 2
+| Name | Tristan Mandery |
+| :--- | :--- |
+| Name | Lab 2 |
+| Description | Creating a program that calculates dimensions of a circle |
+| Due Date | 2-Feb-19 |
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |

@@ -27,7 +27,8 @@ int main()
     double side1=0, side2=0, side3=0;
     double area=0, perimeter=0 ;
     
-    =perimeter/2;
+
+    
 
     string name;
 	cout << "Hey there, please enter your name " << endl;
@@ -46,10 +47,17 @@ int main()
     cin >> side3; 
 
     perimeter = (side1 + side2 + side3); // P= A+B+C
-    area = sqrt((perimeter/2)((perimeter/2)-side1)((perimeter/2)-side2)((perimeter/2)-side3));
 
+    double s=perimeter/2;
 
-    cout << "Good bye...\nHit enter to exit the program!" << '\n';
+    area = sqrt(s* ( s-side1) * (s-side2) * (s-side3));
+    //https://www.w3resource.com/cpp-exercises/basic/cpp-basic-exercise-18.php
+    //used to understand how to correctly input a larger mathematical equation 
+    
+    cout << " The perimeter of the triangle is:\t" << perimeter << endl;
+    cout << " The area of the trinagle is:\t" << area << endl;
+
+    cout << "Goodbye...\nHit enter to exit the program!" << '\n';
 	cin.ignore(1000, '\n'); 
 	cin.get();
 
