@@ -35,7 +35,7 @@ int main()
     getline( cin,name);
 
     
-    cout << "Welcome" << name<< "\n This program finds the area and perimeter of a triangle with the three inputed sides \n\n";
+    cout << "\n" << "Welcome " << name << "\n\nThis program finds the area and perimeter of a triangle with the three inputed sides \n\n";
 
     cout << name << " ,please enter side1:";
     cin >> side1; 
@@ -53,7 +53,7 @@ int main()
     area = sqrt(s* ( s-side1) * (s-side2) * (s-side3));
     //https://www.w3resource.com/cpp-exercises/basic/cpp-basic-exercise-18.php
     //used to understand how to correctly input a larger mathematical equation 
-    
+
     cout << " The perimeter of the triangle is:\t" << perimeter << endl;
     cout << " The area of the trinagle is:\t" << area << endl;
 
