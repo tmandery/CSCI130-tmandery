@@ -28,8 +28,6 @@ int main()
     double area=0, perimeter=0 ;
     
 
-    
-
     string name;
 	cout << "Hey there, please enter your name " << endl;
     getline( cin,name);
@@ -37,25 +35,36 @@ int main()
     
     cout << "\n" << "Welcome " << name << "\n\nThis program finds the area and perimeter of a triangle with the three inputed sides \n\n";
 
-    cout << name << " ,please enter side1:";
+    cout << name << ",please enter side1:";
     cin >> side1; 
 
-    cout << name << " ,please enter side2:";
+    cout << name << ",please enter side2:";
     cin >> side2; 
 
-    cout << name << " ,please enter side1:";
+    cout << name << ",please enter side3:";
     cin >> side3; 
 
     perimeter = (side1 + side2 + side3); // P= A+B+C
 
     double s=perimeter/2;
 
-    area = sqrt(s* ( s-side1) * (s-side2) * (s-side3));
+    area = sqrt(s* ( s-side1) * (s-side2) * (s-side3)); //A = sqrt(s(s-a)(s-b)(s-c))
     //https://www.w3resource.com/cpp-exercises/basic/cpp-basic-exercise-18.php
-    //used to understand how to correctly input a larger mathematical equation 
+    //used to find how Herons formula works and how to correctly input a larger mathematical equation 
 
-    cout << " The perimeter of the triangle is:\t" << perimeter << endl;
-    cout << " The area of the trinagle is:\t" << area << endl;
+    cout << "\nThe perimeter of the triangle is:" << perimeter << endl;
+    cout << "The area of the triangle is:" << area << endl;
+
+    if (side1+side2>side3 && side1+side3>side2 && side2+side3>side1) // Tests to see if the inputed side lengths create a triangle  
+    {
+        cout<< "The sides do in fact form a triangle" << endl;
+    }
+    else
+    {
+        cout<< "The given sides do not form a real triangle" << endl;
+
+    }
+
 
     cout << "Goodbye...\nHit enter to exit the program!" << '\n';
 	cin.ignore(1000, '\n'); 
