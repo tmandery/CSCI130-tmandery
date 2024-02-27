@@ -27,6 +27,17 @@ this is not a new line....
 | Self Grade | 100/100 |
 | Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
 
+### Assignment #2
+
+| Name | Tristan Mandery|
+| :--- | :--- |
+| Name | Triangle HW-2 |
+| Description | Calculates the area and perimeter of a triangle with 3 inputed sides |
+| Due Date | 2-Feb-22 |
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Hw-1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
 
 ### Lab 1
 
