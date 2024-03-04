@@ -62,3 +62,14 @@ Lab 2
 | Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
 | Self Grade | 100/100 |
 | Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
+
+Lab 3
+| Name | Tristan Mandery |
+| :--- | :--- |
+| Name | Lab 3 |
+| Description | Built-in and User Defined Functions & Automated Testing Lab |
+| Due Date | 3-March-4 |
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
+| Self Grade | 90/100 |
+| Notes | have fixed all the code and code does work ; screenshot found in the same location |
