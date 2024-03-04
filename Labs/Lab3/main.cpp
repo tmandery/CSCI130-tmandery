@@ -30,7 +30,7 @@ const float epsilon = 1e-5; // 0.00001 accuracy upto 5 decimal points; error of 
 // Function that calculates the distance between two points
 // x1, y1 and x2, y2 and returns the calculated value
 double findDistance(int, int, int, int);
-
+double distance=0;
 // test function that runs automated testing
 void test();
 
@@ -65,8 +65,11 @@ int main()
          cin >> ch >> x2 >> ch >> y2 >> ch; //Fixed
         printf("(x2, y2) = (%d, %d)\n", x2, y2); //Fixed
 
-        double findDistance = (sqrt(((x2-x1)^2) + ((y2-y1)^2)));
-        printf("Distance = (%d)\n",  findDistance );
+
+        float x= (x2-x1);
+        float y= (y2-y1);   
+        double findDistance = (sqrt((pow(x,2))+(pow(y,2))));
+        printf("Distance = (%d)\n",  findDistance ); //fixed 
         //FIXME5 - call findDistance function passing proper arguments
         //FIXME6 – Using printf function display the returned distance with proper description
     }
@@ -80,7 +83,9 @@ int main()
 
 double findDistance(int x1, int y1, int x2, int y2)
 {
-    double findDistance =  sqrt((x2-x1)^2 + (y2-y1)^2);
+    float x= (x2-x1);
+    float y= (y2-y1);
+    double findDistance =  sqrt((pow(x,2))+(pow(y,2))); //fixed 
     
     // FIXME7 - Find the distance between (x1, y1) and (x2, y2)
     // following the algorithm in step 1
@@ -91,9 +96,12 @@ double findDistance(int x1, int y1, int x2, int y2)
 // test function that test findDistance function with 3 test cases
 void test()
 {
-    float result =  findDistance(4, 3, 5, 1);
+    float result =  findDistance(3,4,5,1);
     float expected = 2.236067f;
-    assert( fabs(result - expected) <= epsilon); //accept the result if it's less than the error of margin
+    assert( fabs(result - expected) <= epsilon);
+    assert( fabs(result - expected) >= epsilon); //fixed
+    assert( fabs(result - expected) > epsilon); //fixed
+    //accept the result if it's less than the error of margin
     // FIXME8 - add at least two more test cases
     cerr << "all tests passed..." << endl;
 }
