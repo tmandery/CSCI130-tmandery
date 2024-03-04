@@ -68,7 +68,7 @@ int main()
         
         float x= (x2-x1);
         float y= (y2-y1);   
-        double findDistance = (sqrt((pow(x,2))+(pow(y,2))));
+        double findDistance = (sqrt((pow(x,2))+(pow(y,2)))) ;
         printf("Distance = (%d)\n",  findDistance ); //fixed 
         //FIXME5 - call findDistance function passing proper arguments
         //FIXME6 – Using printf function display the returned distance with proper description
