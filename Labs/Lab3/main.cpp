@@ -30,7 +30,7 @@ const float epsilon = 1e-5; // 0.00001 accuracy upto 5 decimal points; error of 
 // Function that calculates the distance between two points
 // x1, y1 and x2, y2 and returns the calculated value
 double findDistance(int, int, int, int);
-double distance=0;
+
 // test function that runs automated testing
 void test();
 
@@ -65,7 +65,7 @@ int main()
          cin >> ch >> x2 >> ch >> y2 >> ch; //Fixed
         printf("(x2, y2) = (%d, %d)\n", x2, y2); //Fixed
 
-
+        
         float x= (x2-x1);
         float y= (y2-y1);   
         double findDistance = (sqrt((pow(x,2))+(pow(y,2))));
@@ -81,7 +81,7 @@ int main()
     return 0;
 }
 
-double findDistance(int x1, int y1, int x2, int y2)
+ double findDistance(int x1, int y1, int x2, int y2)
 {
     float x= (x2-x1);
     float y= (y2-y1);
