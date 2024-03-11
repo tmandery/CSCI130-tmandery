@@ -20,7 +20,7 @@ using namespace std;
 
 void test();
 
-double findSum(float,float);
+double FindSum(float,float);
 double FindProduct(float,float);
 double FindQuotient(float,float);
 double FindDifference(float,float);
@@ -51,21 +51,54 @@ int main()
 
     test();
 
-    cout << "Sum: " << findSum(n1,n2) << endl;
-    cout << "Product: " << findProduct(n1,n2) << endl;
-    cout << ""
+    cout << "Sum: " << FindSum(n1,n2) << endl;
+    cout << "Product: " << FindProduct(n1,n2) << endl;
+    cout << "Quotient: " << FindQuotient(n1,n2) << endl;
+    cout << "Difference: " << FindDifference(n1,n2) << endl;
+    cout << "Remainder: " << FindRemainder(n1,n2) << endl;
+    cout << "Power: " << FindPower(n1,n2) << endl;
+    cout << "Square root of number 1: " << FindSqrt(n1,n2) << endl;
+    
 
-
-
-
-
+    return 0;
 
 }
 
 
+double FindSum(float n1,float n2)
+{
+double sum = n1 + n2;
+return sum;
+}
 
-
- 
+double FindProduct(float n1, float n2)
+{
+double product = n1*n2;
+return product;
+}
    
+double FindDifference(float n1, float n2)
+{
+double difference = n1-n2;
+return difference;
+}
+   
+double FindQuotient(float n1, float n2)
+{
+double quotient = n1/n2;
+return quotient;
+}
 
-
+double FindPower(float n1, float n2)
+{
+double power =  pow(n1,n2);
+return power;
+}
+   
+double FindSqrt(float n1, float n2)
+{
+double sqrt1 = sqrt(n1);
+double sqrt2 = sqrt(n2);
+return sqrt1,sqrt2;
+}
+   
