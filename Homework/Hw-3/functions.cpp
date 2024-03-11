@@ -18,37 +18,54 @@ Date-  March/4/2024
 #include <cmath>
 using namespace std;
 
-string answer;
-int num1=0;
-int num2=0;
+void test();
 
-void multinums()
+double findSum(float,float);
+double FindProduct(float,float);
+double FindQuotient(float,float);
+double FindDifference(float,float);
+double FindRemainder(float,float);
+double FindPower(float,float);
+double FindSqrt(float,float);
+
+void clearScreen() 
 {
-answer = (num1 * num2);
-cout << "num1" << "*" << "num2" << "=" << answer << endl;
-
+   
+    #ifdef _WIN32
+        system("clS");
+    #else
+        system("clear");
+    #endif
 }
 
 
 
 int main()
 {
+    clearScreen();
 
-cout << "This program calculates several mathematical expressions." << endl;
+    float n1,n2;
+    cout << "Welcome to the Calculator. Please enter two numbers seperated by a space"<< endl;
+    cin >> n1 >> n2;
+    cout << "Your numbers are " << n1 << " and " << n2 << endl;
 
- cout << "Enter the numbers in the form (x, y): ";
-        cin >> num1 >> num2; 
-        printf("(num1, num2) = (%d, %d)\n", num1, num2);
+    test();
 
-multinums();
+    cout << "Sum: " << findSum(n1,n2) << endl;
+    cout << "Product: " << findProduct(n1,n2) << endl;
+    cout << ""
 
 
 
-    cin.ignore(1000, '\n');
-    cout << "Enter to quit the program: ";
-    cin.get();
-    cout << "Good bye..." << endl;
-    return 0;
+
+
+
 }
+
+
+
+
+ 
+   
 
 

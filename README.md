@@ -73,3 +73,14 @@ Lab 3
 | Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
 | Self Grade | 90/100 |
 | Notes | have fixed all the code and code does work ; screenshot found in the same location |
+
+Lab 4
+| Name | Tristan Mandery |
+| :--- | :--- |
+| Name | Lab 4 |
+| Description | Built-in and User Defined Functions & Automated Testing Lab |
+| Due Date | 3-March-13 |Conditional Statements and More User Defined Functions Lab
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | have fixed all the code and code does work ; screenshot found in the same location |
