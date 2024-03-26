@@ -84,3 +84,14 @@ Lab 4
 | Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
 | Self Grade | 100/100 |
 | Notes | have fixed all the code and code does work ; screenshot found in the same location |
+
+Lab 5
+| Name | Tristan Mandery |
+| :--- | :--- |
+| Name | Lab 4 |
+| Description | The following lab demonstrates the use of loop structures in C++ by drawing various geometric shapes with ASCII characters. |
+| Due Date | 3-March-28 |loops
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | have fixed all the code and code does work ; screenshot found in the same location |
