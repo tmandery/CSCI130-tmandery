@@ -7,8 +7,12 @@ Hw-4 CLI Menu, Conditionals, Functions and Testing
 Date-  March/24/2024
 
 */
-//Program intent
-//
+/*Program intent
+Write a command line interface (CLI) based menu-driven C++ program 
+that computes certain values such as sum, product, max, min, average, oddity 
+of any 5 given numbers along with the following requirements. 
+
+*/
 
 
 
@@ -17,20 +21,23 @@ Date-  March/24/2024
 #include <cstdio>
 #include <cassert>
 #include <cmath>
+#include <string>
 using namespace std;
 
 void test();
 bool program();
+const float epsilon = 1e-5;
+enum FloorType { EVEN, ODD, ZERO};
 void printMenu(void);
-double FindSum(float,float,float,float,float);
-double FindProduct(float,float,float,float,float);
-double FindQuotient(float,float,float,float,float);
-double FindAverage(float,float,float,float,float);
-double FindRemainder(float,float,float,float,float);
-double FindPower(float,float,float,float,float);
-double FindSqrt(float,float,float,float,float);
+void getFiveNumbers(double &, double &, double &, double &, double &);
+double FindSum(const double &, const double &,const double &, const double &, const double &);
+double FindProduct(const double &, const double &,const double &, const double &, const double &);
+double FindMax (const double &, const double &,const double &, const double &, const double &);
+double FindMin (const double &, const double &,const double &, const double &, const double &);
+void FindAverage (const double &, const double &,const double &, const double &, const double &);
+FloorType Floortype(const double &, const double &,const double &, const double &, const double &);
 
-void clearScreen() ,
+void clearScreen()
 {
    
     #ifdef _WIN32
@@ -70,12 +77,12 @@ int main(int argc, char* argv[])
 void printMenu(void) 
 {
     cout << "Menu options:\n";
-    cout << "[1] Sum\n";
-    cout << "[2] Average\n";
-    cout << "[3] Product\n";
-    cout << "[4] Divide\n";
-    cout << "[5] Power\n";
-    cout << "[6] Sqare root\n";
+    cout << "[1] Sum of five numbers\n";
+    cout << "[2] Product of five numbers\n";
+    cout << "[3] Max of five numbers\n";
+    cout << "[4] Min of five numbers\n";
+    cout << "[5] Average of five numbers \n";
+    cout << "[6] Even or odd\n";
     cout << "[7] Quit the program\n";
     cout << "Enter one of the menu options [1-7]: ";
 }
@@ -99,43 +106,117 @@ double product = n1*n2*n3*n4*n5;
 return product;
 }
    
-double FindAverage(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5)
+double FindMax(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5)
 {
-double average = (n1 + n2 + n3 + n4 +n5)/5;
-return average;
+double max = n1;
+if (n2,max) {
+    max=n2;
+}
+if (n3,max) {
+    max=n3;
+}
+if (n4,max) {
+    max=n4;
+}
+if (n5,max) {
+    max=n5;
+}
+return max;
 }
    
+double FindMin(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5)
+{
+double min = n1;
+if (n2,min) {
+    min=n2;
+}
+if (n3,min) {
+    min=n3;
+}
+if (n4,min) {
+    min=n4;
+}
+if (n5,min) {
+    min=n5;
+}
+return min;
+}
 
+FloorType Floortype(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5 )
+{
+    int sum = n1 + n2 + n3 + n4 + n5;
+    int floorsum = floor(sum);
+
+    if(floorsum ==0)
+        return ZERO;
+    else if (floorsum %2 ==0)
+        return EVEN;
+    else   
+        return ODD;
+}
+
+void FindAverage (const double &n1, const double &n2, const double &n3, const double &n4, const double &n5, double &avg)
+{
+    avg = FindSum(n1,n2,n3,n4,n5)/5;
+}
 
 void test() 
 {
-    double answer = FindSum(10, 12.5);
-    double expected = 22.5;
+    double answer = FindSum(1,2,3,4,5);
+    double expected = 15;
     assert(answer == expected); 
-    assert(FindSum(-5, 10.5) == 5.5);
+    assert(FindSum(-1,-2,-3,-4,-5) == -15);
 
-    assert(FindDifference(8.0, 3.0)==5.0);
-    assert(FindDifference(7.2, 4.0)==3.2);
-    assert(FindProduct(3.0, 2.0)==6.0);
-    assert(FindProduct (6.0, 5.0)==30.0);
-   
+    double answer= FindProduct(1,2,3,4,5);
+    expected = 120;
+    assert(answer == expected);
+    assert(FindProduct(3,4,5,6,7)==2520);
+    assert(FindProduct(10,7,4,3,1)==840);
+
+    double answer = FindMax(1,2,3,4,5);
+    expected=5;
+    assert(answer==expected);
+    assert(FindMax(4,5,6,7,8)==8);
+    assert(FindMax(-1,-10,-30,4,0)==4);
+
+    double answer = FindMin(1,2,3,4,5);
+    expected=1;
+    assert(answer==expected);
+    assert(FindMin(4,5,6,7,8)==4);
+    assert(FindMin(-1,-10,-30,4,0)==-30);
+
+    double avg;
+    FindAverage(1,2,3,4,5,avg);
+    expected==3;
+    assert(abs(avg-expected)<=epsilon);
+    FindAverage(3,6,9,12,15,avg);
+    expected=9;
+    assert(abs(avg-expected)<=epsilon);
+
+    assert(Floortype(2,3,5,7,11)==ODD);
+    assert(Floortype(2,3,11,15,17)==ODD);
+    assert(Floortype(0,0,0,0,0)==ZERO);
+    assert(Floortype(2,4,6,8,12)==EVEN);
+
+    cout<< "All tests passed"<< endl;
+
 }
 
 bool program() 
 {
     int option = 1;
-    double num1=0, num2=0; 
+    double num1=0, num2=0,num3=0,num4=0,num5=0; 
     printMenu();
    
     do {
-        if (cin >> option && option >= 1 && option <= 8) {
+        if (cin >> option && option >= 1 && option <= 7) {
            
             break;
         }
         else {
             cin.clear();
             cin.ignore(1000, '\n');
-            cout << "Invalid option, please enter a value between 1 and 8" << endl;
+            cout << "Invalid option, please enter a value between 1 and 7" << endl;
         }
     } while (true);
             
@@ -146,40 +227,48 @@ bool program()
             
             getFiveNumbers(num1, num2, num3, num4, num5);
             double sum = FindSum(num1, num2, num3, num4, num5);
-            printf("%.2f + %.2f = %.2f\n", num1, num2, sum);
+            printf("%.2f + %.2f+%.2f + %.2f + %.2f = %.2f\n", num1, num2,num3,num4,num5 ,sum);
             break;
         }
         case 2:
         {
-            getTwoNumbers(num1,num2);
-            cout << FindDifference(num1,num2) << endl; 
+            getFiveNumbers(num1,num2, num3, num4, num5);
+            cout << FindProduct(num1,num2, num3, num4, num5) << endl; 
             break;
         }
         case 3:
         {
-            getTwoNumbers(num1,num2);
-            cout << FindProduct(num1,num2) << endl;
+            getFiveNumbers(num1,num2, num3, num4, num5);
+            cout << "Max of"<< FindMax(num1,num2, num3, num4, num5) << endl;
             break;
         }
-      
         case 4: 
         {
-            getTwoNumbers(num1,num2);
-            cout << FindQuotient(num1,num2) << endl;
+            getFiveNumbers(num1,num2, num3, num4, num5);
+            cout << "Min of"<< FindMin(num1,num2, num3, num4, num5) << endl;
             break;
 
         }
         case 5:
         {
            
-            getTwoNumbers(num1, num2);
-            double max = FindPower(num1, num2);
+            getFiveNumbers(num1,num2, num3, num4, num5);
+            double avg;
+            FindAverage(num1,num2, num3, num4, num5,avg);
+            printf("Average of%.2f,%.2f,%.2f,%.2f,%.2f is %.2f\n", num1, num2,num3,num4,num5 ,avg);
+            
             break;
         }
         case 6:
         {
-            getTwoNumbers(num1,num2);
-            double min = FindSqrt(num1,num2);
+            getFiveNumbers(num1,num2, num3, num4, num5);
+            FloorType result = Floortype(num1,num2, num3, num4, num5);
+            if(result==EVEN)
+                cout <<"Floor of the sum is EVEN" << endl;
+            else if(result==ZERO)
+                cout << "Floor of the sum is ZERO" << endl;
+            else(result==ODD);
+                cout << "Floor of the sum is ODD" << endl;
             break;
 
         }
