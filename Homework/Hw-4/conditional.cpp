@@ -108,38 +108,38 @@ return product;
    
 double FindMax(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5)
 {
-double max = n1;
-if (n2,max) {
-    max=n2;
+    double max = n1;
+    if (n2 > max) {
+        max = n2;
+    }
+    if (n3 > max) {
+        max = n3;
+    }
+    if (n4 > max) {
+        max = n4;
+    }
+    if (n5 > max) {
+        max = n5;
+    }
+    return max;
 }
-if (n3,max) {
-    max=n3;
-}
-if (n4,max) {
-    max=n4;
-}
-if (n5,max) {
-    max=n5;
-}
-return max;
-}
-   
+
 double FindMin(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5)
 {
-double min = n1;
-if (n2,min) {
-    min=n2;
-}
-if (n3,min) {
-    min=n3;
-}
-if (n4,min) {
-    min=n4;
-}
-if (n5,min) {
-    min=n5;
-}
-return min;
+    double min = n1;
+    if (n2 < min) {
+        min = n2;
+    }
+    if (n3 < min) {
+        min = n3;
+    }
+    if (n4 < min) {
+        min = n4;
+    }
+    if (n5 < min) {
+        min = n5;
+    }
+    return min;
 }
 
 FloorType Floortype(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5 )
@@ -155,9 +155,9 @@ FloorType Floortype(const double &n1, const double &n2, const double &n3, const 
         return ODD;
 }
 
-void FindAverage (const double &n1, const double &n2, const double &n3, const double &n4, const double &n5, double &avg)
+void FindAverage(const double &n1, const double &n2, const double &n3, const double &n4, const double &n5, double &avg)
 {
-    avg = FindSum(n1,n2,n3,n4,n5)/5;
+    avg = (n1 + n2 + n3 + n4 + n5) / 5.0;
 }
 
 void test() 
@@ -167,19 +167,19 @@ void test()
     assert(answer == expected); 
     assert(FindSum(-1,-2,-3,-4,-5) == -15);
 
-    double answer= FindProduct(1,2,3,4,5);
+    answer= FindProduct(1,2,3,4,5);
     expected = 120;
     assert(answer == expected);
     assert(FindProduct(3,4,5,6,7)==2520);
     assert(FindProduct(10,7,4,3,1)==840);
 
-    double answer = FindMax(1,2,3,4,5);
+    answer = FindMax(1,2,3,4,5);
     expected=5;
     assert(answer==expected);
     assert(FindMax(4,5,6,7,8)==8);
     assert(FindMax(-1,-10,-30,4,0)==4);
 
-    double answer = FindMin(1,2,3,4,5);
+    answer = FindMin(1,2,3,4,5);
     expected=1;
     assert(answer==expected);
     assert(FindMin(4,5,6,7,8)==4);
@@ -187,7 +187,7 @@ void test()
 
     double avg;
     FindAverage(1,2,3,4,5,avg);
-    expected==3;
+    expected=3;
     assert(abs(avg-expected)<=epsilon);
     FindAverage(3,6,9,12,15,avg);
     expected=9;
@@ -261,16 +261,15 @@ bool program()
         }
         case 6:
         {
-            getFiveNumbers(num1,num2, num3, num4, num5);
-            FloorType result = Floortype(num1,num2, num3, num4, num5);
-            if(result==EVEN)
-                cout <<"Floor of the sum is EVEN" << endl;
-            else if(result==ZERO)
-                cout << "Floor of the sum is ZERO" << endl;
-            else(result==ODD);
-                cout << "Floor of the sum is ODD" << endl;
-            break;
-
+        getFiveNumbers(num1,num2, num3, num4, num5);
+        FloorType result = Floortype(num1,num2, num3, num4, num5);
+        if(result==EVEN)
+            cout <<"Floor of the sum is EVEN" << endl;
+        else if(result==ZERO)
+            cout << "Floor of the sum is ZERO" << endl;
+        else if(result==ODD)
+            cout << "Floor of the sum is ODD" << endl; 
+        break;
         }
       
         case 7:
