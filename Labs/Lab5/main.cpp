@@ -129,7 +129,7 @@ int main(int argc, char* argv[]) {
             wantsToQuit = true;
             cout << "Have a nice day!\n";
         }
-        cin.ignore(1000, '\n'); // FIXME 5
+        cin.ignore(1000, '\n'); 
     }
     return 0;
 }
