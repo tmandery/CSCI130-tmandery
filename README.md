@@ -63,6 +63,18 @@ this is not a new line....
 | Self Grade | 100/100 |
 | Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
 
+### Assignment #4
+
+| Name | Tristan Mandery|
+| :--- | :--- |
+| Name |  HW-5 |
+| Description |“Guess the Number” Game|
+| Due Date | 3-March-28 |
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Hw-1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
+
 ### Lab 1
 
 | Name | Tristan Mandery |
