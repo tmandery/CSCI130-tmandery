@@ -53,26 +53,7 @@ int main(int argc, char* argv[]) {
     // Must use these variables to store the returned values from functions
 
     OPERATION oper;
-  bool keepRunning = true;
-    if(argc == 2 && string(argv[1]) == "test") {
-        test();
-        exit(EXIT_SUCCESS); // exit the program
-    }
-    else {
-        // this loop will keep the program running until user wants to quit
-        while (true) {
-            if (!program()) // call program
-                break; // break loop if program returned false
-            cin.ignore(100, '\n');
-            cout << "Enter to continue...";
-            cin.get();
-            clearScreen();
-        }
-    }
-    cin.ignore(100, '\n');
-    cout << "Enter to quit the program.\n";
-    cout << "Good bye..." << endl;
-    cin.get();
+ 
     //FIXME4: Add do... while loop to continue the program until the user wants to quit
     //FIXME5: call clear function defined above to clear the screen
     showMenu();

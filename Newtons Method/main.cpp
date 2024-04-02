@@ -9,9 +9,9 @@ Author:Tristan Mandery
 #include <cmath>
 #include <cstdlib>
 
-#define f(x) (3*x - cos(x) - 1)
+#define f(x) (cos(x) - x)
 
-#define g(x) (3 + sin(x))
+#define g(x) (-sin(x)-1)
 
 using namespace std;
 
@@ -19,8 +19,8 @@ int main() {
     float x0, x1, f0, f1, g0, e;
     int step = 1, N;
 
-    cout <<"The function is f(x) (3*x - cos(x) - 1)" <<endl;
-    cout <<"The derivative is g(x) (3 + sin(x))  " << endl;
+    cout <<"The function is f(x) (cos(x)-x)" <<endl;
+    cout <<"The derivative is g(x) (-sin(x)-1)  " << endl;
     cout <<" What is its root?" << endl;
     cout << setprecision(12) << fixed;
 
@@ -33,7 +33,7 @@ int main() {
     cin >> N;
 
     cout << endl << "*********************" << endl;
-    cout << "Newton-Raphson Method" << endl;
+    cout << "Newton Method" << endl;
     cout << "*********************" << endl;
 
     do {
