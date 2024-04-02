@@ -22,7 +22,7 @@ int main() {
     cout <<"The function is f(x) (3*x - cos(x) - 1)" <<endl;
     cout <<"The derivative is g(x) (3 + sin(x))  " << endl;
     cout <<" What is its root?" << endl;
-    cout << setprecision(6) << fixed;
+    cout << setprecision(12) << fixed;
 
    
     cout << "Enter initial guess: ";
