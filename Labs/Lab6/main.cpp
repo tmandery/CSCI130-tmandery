@@ -156,7 +156,7 @@ large_int MyFunctions::findProduct(const large_int &n1, const large_int &n2) {
 
 big_int MyFunctions::findDifference(const large_int &n1, const large_int &n2) {  //FIXED9
     // deference pointers n1 and n2 before adding their values
-    return (n1) -(n2);
+    return (n1)-(n2);
 }
 // FIXME9: define findDifference function declared inside MyFunctions namespace
 // return the value of second big_int subtracted from the first
