@@ -82,7 +82,7 @@ int main(int argc, char* argv[]) {
             // store the data by dereferencing pointers
             cin >> *num1 >> *num2;
             // passing pointers to findSum function
-            *prod = MyFunctions::findDifference(*num1, *num2);            //FIXED6
+            *diff = MyFunctions::findDifference(*num1, *num2);            //FIXED6
             printf("%lld - %lld = %lld\n", *num1, *num2, *diff);
             break;
         case LARGER:
@@ -90,7 +90,7 @@ int main(int argc, char* argv[]) {
             // store the data by dereferencing pointers
             cin >> *num1 >> *num2;
             // passing pointers to findSum function
-            *prod = MyFunctions::findProduct(*num1, *num2);
+            *larg = MyFunctions::findProduct(*num1, *num2);
             printf("%lld is larger than %lld \n", *num1, *num2, *larg);    //FIXED6
             break;
         default:
