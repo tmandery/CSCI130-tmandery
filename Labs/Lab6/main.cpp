@@ -53,12 +53,16 @@ int main(int argc, char* argv[]) {
     // Must use these variables to store the returned values from functions
 
     OPERATION oper;
- 
+    bool wantstoQuit = false;
+
+    do{
+    
     //FIXME4: Add do... while loop to continue the program until the user wants to quit
     //FIXME5: call clear function defined above to clear the screen
     showMenu();
     cin >> input;
     oper = getOperation(input);
+    clear();
     switch (oper) {
         case ADD:
             cout << "Enter two whole numbers separated by space: ";
@@ -93,13 +97,21 @@ int main(int argc, char* argv[]) {
             *larg = MyFunctions::findProduct(*num1, *num2);
             printf("%lld is larger than %lld \n", *num1, *num2, *larg);    //FIXED6
             break;
+        case QUIT:
+            wantstoQuit= true;
+            break;
         default:
+            wantstoQuit=true;
             break;
     }
+}
+    while(!wantstoQuit);
     delete num1;
     delete num2;
     delete sum;
     delete prod;
+    delete larg;
+    delete diff;
     cin.ignore(1000, '\n');
     cout << "Good bye! Enter to exit the program...";
     cin.get();
@@ -111,8 +123,9 @@ void showMenu(void) {
     cout << "[1] Add two integers\n";
     cout << "[2] Multiply two integers\n";
     cout << "[3] Subtract one integer from another\n";
-    cout << "[4] Quit the program\n";
-    cout << "Enter your choice [1-4]: ";
+    cout << "[4] Larger of the two\n";
+    cout << "{5] Quit the program\n";
+    cout << "Enter your choice [1-5]: ";
 }
 
 // function returns OPERATION type given character choice
@@ -131,6 +144,8 @@ OPERATION getOperation(char choice) {
             break;
         case '4':
             op = LARGER;// FIXME7 - add case for LARGER //FIXED7
+        case '5':
+            op = QUIT;
         default:
             op = QUIT;
     }
