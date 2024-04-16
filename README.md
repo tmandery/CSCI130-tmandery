@@ -131,3 +131,14 @@ Lab 5
 | Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
 | Self Grade | 100/100 |
 | Notes | have fixed all the code and code does work ; screenshot found in the same location |
+
+Lab 6
+| Name | Tristan Mandery |
+| :--- | :--- |
+| Name | Lab 6 |
+| Description | Simple Calculator |
+| Due Date | April 12th 2024 |
+| Status | Done |
+| Location | https://github.com/tmandery/CSCI130-tmandery/blob/main/Lab1/main.cpp |
+| Self Grade | 100/100 |
+| Notes | have fixed all the code and code does work ; screenshot found in the same location |
