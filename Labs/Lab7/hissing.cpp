@@ -32,10 +32,10 @@ int main(int argc, char* argv[]) {
 
 string answer(const string &line) {
     // FIXME3
-    // implment algorithm step 2
-    // return "hiss" if ss is found in line
-    // otherwise, return "no hiss"
-    return "hiss";
+    int hiss = line.find("ss");
+    if(hiss>=0)           //fixed#3
+        return "hiss";
+    return "no hiss";
 }
 
 // unit testing answer()
