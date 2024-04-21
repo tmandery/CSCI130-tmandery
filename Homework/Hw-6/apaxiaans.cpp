@@ -1,14 +1,24 @@
 /*
 Tristan Mandery
 Date: 4/17/2024
-Hw-6
+Hw-6 
+Program info: The Apaaaaxian language translator 
 */
+
+/* Program Steps
+1. Program asks for input to be stored in a string
+2. Using assert tests the input for the string to verify if its part of the apaxian language
+3. Outputs a compressed string with out the extra letters 
+*/
+
 #include <iostream>
 #include <cassert>
 #include <cstdio>
-std::string compressString(const std::string& input)
+using namespace std;
+
+string compressString(const string& input)
 {
-    std:: string compressed;
+     string compressed;
     char previous ='\0';
     for (char c : input)
     {
@@ -36,12 +46,12 @@ int main(int argc, char *argv[])
     {
         testcompressString();
 
-        std::cout<< "All tests passed" << std::endl;
+        cout<< "All tests passed" << endl;
         return 0;
     }
-std::string input;
-std:: cin >> input;
-std::cout << compressString(input) << std::endl;
+string input;
+cin >> input;
+cout << compressString(input) << endl;
 return 0;
-}
+} 
 

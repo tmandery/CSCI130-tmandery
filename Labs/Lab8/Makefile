@@ -10,10 +10,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = apaxiaans.out
+PROGRAM = array.out
 
 # list all .cpp files separated by space
-CPPFILES = apaxiaans.cpp
+CPPFILES = main.cpp
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
